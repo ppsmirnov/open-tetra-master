@@ -31,6 +31,12 @@ config.module.loaders.push(
         loaders: ['react-hot', 'babel?cacheDirectory'],
         exclude: /node_modules/,
     },
+
+    { test: /\.(sass|scss)$/,
+        loaders: ['style', 'css', 'sass'] },
+
+    { test: /\.(jpg|png|svg)$/,
+        loader: 'file' },
     {
         test: require.resolve('react'),
         loader: 'imports?shim=es5-shim/es5-shim&sham=es5-shim/es5-sham',
