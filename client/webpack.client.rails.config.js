@@ -33,7 +33,7 @@ config.module.loaders.push(
     },
 
     { test: /\.(sass|scss)$/,
-        loaders: ['style', 'css', 'sass'] },
+        loaders: ['style', 'css?sourceMap', 'sass?sourceMap'] },
 
     { test: /\.(jpg|png|svg)$/,
         loader: 'file' },
