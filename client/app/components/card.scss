@@ -1,13 +1,8 @@
 @import "../styles/index";
 
-.tile {
-  display: inline-flex;
+.card {
+  display: inline-block;
   width: $card-width;
   height: $card-height;
   border: 1px solid black;
-  margin: 0 0.2em 0.2em 0;
-
-  &--stub {
-    background: grey;
-  }
 }

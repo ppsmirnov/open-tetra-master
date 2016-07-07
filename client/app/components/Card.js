@@ -1,3 +1,4 @@
+import './card.scss';
 import React, {Component} from 'react';
 import {block, elementForBlock } from '../utils/bem';
 
@@ -10,7 +11,7 @@ export default class Card extends Component {
             <div className = {b()}>
                 <div className = {el('stats')}>
                     <span className = {el('power')}>{this.props.power}</span>
-                    <span className = {el('class')}>{this.props.class}</span>
+                    <span className = {el('class')}>{this.props.cardClass}</span>
                     <span className = {el('pdef')}>{this.props.pdef}</span>
                     <span className = {el('mdef')}>{this.props.mdef}</span>
                 </div>
