@@ -9,6 +9,7 @@ import store from './store';
 import {createField, join} from './actions/actionTypes';
 import {image, name, random } from 'faker';
 import {times} from 'lodash';
+import "./components/testEx/index";
 
 const user1 = {login: name.firstName(), img: image.avatar()};
 const user2 = {login: name.firstName(), img: image.avatar()};

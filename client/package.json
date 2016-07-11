@@ -16,6 +16,7 @@
     "jquery": "^2.2.2",
     "jquery-ujs": "^1.2.1",
     "lodash": "^4.7.0",
+    "raw-loader": "^0.5.1",
     "react": "^15.2.0",
     "react-dnd": "^2.1.4",
     "react-dom": "^15.2.0",
