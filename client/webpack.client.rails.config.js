@@ -49,6 +49,15 @@ config.module.loaders.push(
 
 module.exports = config;
 
+config.plugins.push(
+    new webpack.ProvidePlugin({
+        React: "react"}),
+    new webpack.DefinePlugin({
+        "Component": "React.Component",
+        "PropTypes": "React.PropTypes"
+    })
+);
+
 if (devBuild) {
     console.log('Webpack dev build for Rails'); // eslint-disable-line no-console
     module.exports.devtool = 'eval-source-map';

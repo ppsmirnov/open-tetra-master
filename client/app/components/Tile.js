@@ -1,4 +1,3 @@
-import React from 'react';
 import {block, elementForBlock} from '../utils/bem';
 import './tile.scss';
 

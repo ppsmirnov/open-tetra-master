@@ -1,5 +1,7 @@
+window.Component = React.Component;
+window.PropTypes = React.PropTypes;
+
 import './styles/index.scss';
-import React from 'react'
 import ReactOnRails from 'react-on-rails';
 import Field from './components/Field';
 import UserColumn from './components/UserColumn';
@@ -9,7 +11,6 @@ import store from './store';
 import {createField, join} from './actions/actionTypes';
 import {image, name, random } from 'faker';
 import {times} from 'lodash';
-import "./components/testEx/index";
 
 const user1 = {login: name.firstName(), img: image.avatar()};
 const user2 = {login: name.firstName(), img: image.avatar()};

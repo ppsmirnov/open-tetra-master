@@ -1,4 +1,3 @@
-import React, {Component, PropTypes} from 'react';
 import {block, elementForBlock} from '../utils/bem';
 import Tile from './Tile';
 import './field.scss';
