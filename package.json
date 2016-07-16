@@ -13,6 +13,5 @@
     "build:dev:client": "(cd client && npm run build:dev:client --silent)",
     "test": "rspec"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }
