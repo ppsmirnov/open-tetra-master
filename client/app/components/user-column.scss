@@ -1,0 +1,15 @@
+.user-column {
+  display: flex;
+}
+
+.user-column-info {
+  display: inline-flex;
+  justify-content: center;
+  &__pic img{
+    border-radius: 50%;
+  }
+}
+
+.deck-block {
+  display: inline-flex;
+}

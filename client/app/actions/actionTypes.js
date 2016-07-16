@@ -17,3 +17,7 @@ export const process = (field) => ({type: PROCESS, payload: {field}});
 export const MATCH_END = 'match.end';
 export const matchEnd = (user1, user2, field, force) => ({type: MATCH_END, payload: {field, user1, user2, force}});
 
+//dom actions
+export const DOM_FIELD_READY = 'dom.field.ready';
+export const domFieldReady = (tileMap) => ({type: DOM_FIELD_READY, payload: {tileMap}});
+

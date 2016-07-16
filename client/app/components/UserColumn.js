@@ -1,5 +1,7 @@
 import { block, elementForBlock} from '../utils/bem';
-import Card from './Card';
+import CardInDeck from './CardInDeck';
+import './user-column.scss';
+import {moveTry} from '../actions/moveTry';
 
 const userBlock = block('user-column'),
     userElement = elementForBlock(userBlock),
@@ -9,6 +11,13 @@ const userBlock = block('user-column'),
     deckElement = elementForBlock(deckBlock);
 
 export default class UserColumn extends Component {
+    static contextTypes = {store: PropTypes.object};
+
+    onMove = (dragSource) => {
+        const dragSourceRect = dragSource.getBoundingClientRect();
+        this.context.store.dispatch(moveTry(dragSourceRect));
+    };
+
     render() {
         const {img, login, cards} = this.props;
         return <div className = {userBlock()}>
@@ -20,7 +29,7 @@ export default class UserColumn extends Component {
             </div>
 
             <div className = {deckBlock()}>
-                {cards.map((card, index) => <Card key = {index} {...card} />)}
+                {cards.map((card, index) => <CardInDeck key = {index} dragStop = {this.onMove} {...card} />)}
             </div>
         </div>
     }
