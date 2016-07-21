@@ -60,7 +60,7 @@ config.plugins.push(
 
 if (devBuild) {
     console.log('Webpack dev build for Rails'); // eslint-disable-line no-console
-    module.exports.devtool = 'eval-source-map';
+    module.exports.devtool = 'source-map';
 } else {
     config.plugins.push(
         new webpack.optimize.DedupePlugin()
