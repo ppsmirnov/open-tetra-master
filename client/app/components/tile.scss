@@ -6,8 +6,16 @@
   height: $card-height;
   border: 1px solid black;
   margin: 0 0.2em 0.2em 0;
+  position: relative;
+  padding: 0.5em;
 
   &--stub {
     background: grey;
+  }
+
+  .card {
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 }

@@ -1,6 +1,6 @@
-import {map} from 'lodash';
+import {map, without, chain, value} from 'lodash';
 import {area} from '../utils/dom';
-import {move} from './actionTypes';
+import {move, setCurrentPlayer} from './actionTypes';
 
 export const moveTry = (dragSourceRect, card) => (dispatch, getState) => {
     const state = getState();
@@ -16,7 +16,15 @@ export const moveTry = (dragSourceRect, card) => (dispatch, getState) => {
 
     if(overlapData.area > 1000) {
         const tile = state.field[overlapData.index];
-        if(tile.stub) return null;
-        dispatch(move(state.currentPlayer, {x: tile.x, y: tile.y}, card))
+        const nextPlayer = chain(state.users)
+                .map(user => user.id)
+                .without(state.currentPlayer)
+                .get(0)
+                .value()
+            ;
+
+        if(tile.stub || tile.card) return null;
+        dispatch(move(state.currentPlayer, {x: tile.x, y: tile.y}, card));
+        dispatch(setCurrentPlayer(nextPlayer))
     }
 };

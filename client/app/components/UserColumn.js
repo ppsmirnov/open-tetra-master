@@ -17,8 +17,8 @@ export default class UserColumn extends Component {
     };
 
     render() {
-        const {img, login, cards} = this.props;
-        return <div className = {userBlock()}>
+        const {img, login, cards, isActive} = this.props;
+        return <div className = {userBlock([{'is-active' : isActive}])}>
             <div className = {infoBlock()}>
                 <div className = {infoElement('pic')}>
                     <img src={img}/>

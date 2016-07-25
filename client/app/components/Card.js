@@ -4,6 +4,14 @@ import {block, elementForBlock } from '../utils/bem';
 const b = block('card');
 const el = elementForBlock(b);
 export default class Card extends Component {
+    static propTypes = {
+        power: PropTypes.number,
+        cardClass: PropTypes.string,
+        pdef: PropTypes.number,
+        mdef: PropTypes.number,
+        directions: PropTypes.array
+    };
+
     render() {
         return(
             <div className = {b()}>
